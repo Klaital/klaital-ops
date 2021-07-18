@@ -1,0 +1,10 @@
+version: '3'
+services:
+  influxdb:
+    image: quay.io/influxdb/influxdb:v2.0.3
+    volumes:
+      - ./storage:/var/lib/influxdb2
+      - ./config.yml:/etc/influxdb2/config.yml
+    ports:
+      - "8086:8086"
+
